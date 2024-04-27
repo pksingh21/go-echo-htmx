@@ -12,7 +12,7 @@ import (
 
 // In production, the name of the database
 // would be obtained from an .env file
-const dbName = "user_data.db"
+const dbName = "../user_data.db"
 
 func main() {
 	app := echo.New()
@@ -23,6 +23,9 @@ func main() {
 	app.Use(middleware.Logger())
 
 	// We redirect the root route to the "/user" route
+	app.GET("/",func (c echo.Context) error {
+		return c.Redirect(http.StatusMovedPermanently,"/testing")
+	})
 	app.GET("/", func(c echo.Context) error {
 		return c.Redirect(http.StatusMovedPermanently, "/user")
 	})

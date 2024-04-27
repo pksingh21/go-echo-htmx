@@ -10,7 +10,6 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/pksingh21/go-echo-htmx/services"
 	"github.com/pksingh21/go-echo-htmx/views/user"
-	"github.com/pksingh21/go-echo-htmx/views/learnings"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

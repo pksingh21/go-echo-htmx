@@ -14,8 +14,8 @@ import (
 	"strconv"
 
 	"fmt"
-	"github.com/emarifer/go-templ-project-structure/services"
-	"github.com/emarifer/go-templ-project-structure/views/layout"
+	"github.com/pksingh21/go-echo-htmx/services"
+	"github.com/pksingh21/go-echo-htmx/views/layout"
 )
 
 func Show(users []services.User) templ.Component {

@@ -1,4 +1,4 @@
-module github.com/emarifer/go-templ-project-structure
+module github.com/pksingh21/go-echo-htmx
 
 go 1.21.0
 

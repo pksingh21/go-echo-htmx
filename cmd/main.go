@@ -3,11 +3,11 @@ package main
 import (
 	"net/http"
 
-	"github.com/emarifer/go-templ-project-structure/db"
-	"github.com/emarifer/go-templ-project-structure/handlers"
-	"github.com/emarifer/go-templ-project-structure/services"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/pksingh21/go-echo-htmx/db"
+	"github.com/pksingh21/go-echo-htmx/handlers"
+	"github.com/pksingh21/go-echo-htmx/services"
 )
 
 // In production, the name of the database
@@ -23,8 +23,8 @@ func main() {
 	app.Use(middleware.Logger())
 
 	// We redirect the root route to the "/user" route
-	app.GET("/",func (c echo.Context) error {
-		return c.Redirect(http.StatusMovedPermanently,"/testing")
+	app.GET("/", func(c echo.Context) error {
+		return c.Redirect(http.StatusMovedPermanently, "/testing")
 	})
 	app.GET("/", func(c echo.Context) error {
 		return c.Redirect(http.StatusMovedPermanently, "/user")

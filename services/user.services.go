@@ -3,7 +3,7 @@ package services
 import (
 	"time"
 
-	"github.com/emarifer/go-templ-project-structure/db"
+	"github.com/pksingh21/go-echo-htmx/db"
 )
 
 func NewServicesUser(u User, uStore db.UserStore) *ServicesUser {

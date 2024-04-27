@@ -7,9 +7,10 @@ import (
 	"strings"
 
 	"github.com/a-h/templ"
-	"github.com/emarifer/go-templ-project-structure/services"
-	"github.com/emarifer/go-templ-project-structure/views/user"
 	"github.com/labstack/echo/v4"
+	"github.com/pksingh21/go-echo-htmx/services"
+	"github.com/pksingh21/go-echo-htmx/views/user"
+	"github.com/pksingh21/go-echo-htmx/views/learnings"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
@@ -71,6 +72,6 @@ func (uh *UserHandler) HandlerShowUserById(c echo.Context) error {
 func (uh *UserHandler) View(c echo.Context, cmp templ.Component) error {
 	c.Response().Header().Set(echo.HeaderContentType, echo.MIMETextHTML)
 
-	response :=  cmp.Render(c.Request().Context(), c.Response().Writer)
+	response := cmp.Render(c.Request().Context(), c.Response().Writer)
 	return response
 }

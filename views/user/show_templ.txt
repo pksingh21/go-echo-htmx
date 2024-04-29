@@ -1,0 +1,10 @@
+<div><h1 class=\"text-3xl text-center font-bold\">Users List</h1><section class=\"overflow-auto max-w-2xl max-h-96 mx-auto mt-12 bg-slate-600 rounded-lg shadow-xl\"><table class=\"table table-zebra\"><!-- head --><thead class=\"bg-slate-700\"><tr><th></th><th>Username</th><th class=\"text-center\">Email</th><!-- <th class=\"text-center\">Created At</th> --></tr></thead> 
+<tbody>
+<tr><th>
+</th><td><a hx-swap=\"transition:true\" hx-headers=\"js:{&#39;X-TimeZone&#39;: Intl.DateTimeFormat().resolvedOptions().timeZone}\" class=\"hover:text-sky-500 ease-in duration-300 hover:underline flex gap-2 justify-between\" href=\"
+\">
+ <img class=\"hover:scale-[1.2] ease-in duration-300\" src=\"/img/info_icon.svg\" alt=\"Info icon\"></a></td><td>
+</td><!-- <td class=\"flex justify-center gap-2\">\n\t\t\t\t\t\t\t\tCreated At\n\t\t\t\t\t\t\t</td> --></tr>
+</tbody>
+<tbody><tr><td colspan=\"4\" align=\"center\">There are no users to show yet</td></tr></tbody>
+</table></section></div>

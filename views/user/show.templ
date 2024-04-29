@@ -3,12 +3,12 @@ package user
 import (
 	"strconv"
 
-	"github.com/pksingh21/go-echo-htmx/views/layout"
 	"github.com/pksingh21/go-echo-htmx/services"
 	"fmt"
 )
 
 templ Show(users []services.User) {
+	<div>
 	<h1 class="text-3xl text-center font-bold">
 		Users List
 	</h1>
@@ -64,10 +64,9 @@ templ Show(users []services.User) {
 			}
 		</table>
 	</section>
+	</div>
 }
 
 templ ShowIndex(title string, cmp templ.Component) {
-	@layout.Base(title) {
 		@cmp
-	}
 }

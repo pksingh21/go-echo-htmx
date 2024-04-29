@@ -1,6 +1,8 @@
 package services
 
 import (
+	"fmt"
+	"math/rand"
 	"time"
 
 	"github.com/pksingh21/go-echo-htmx/db"
@@ -27,8 +29,19 @@ type ServicesUser struct {
 }
 
 func (su *ServicesUser) GetAllUsers() ([]User, error) {
-	query := `SELECT id, username, email, created_at FROM users ORDER BY created_at DESC`
+	n := 10
+	for i := 0; i < n; i++ {
+		username := fmt.Sprintf("user%d", rand.Intn(1000))
+		email := fmt.Sprintf("%s@example.com", username)
+		createdAt := time.Now().Add(-time.Duration(rand.Intn(720)) * time.Hour) // Random date within last 30 days
 
+		query := `INSERT INTO users (username, email, created_at) VALUES (?, ?, ?)`
+		_, err := su.UserStore.Db.Query(query, username, email, createdAt)
+		if err != nil {
+			return []User{}, err
+		}
+	}
+	query := `SELECT id, username, email, created_at FROM users ORDER BY created_at DESC`
 	rows, err := su.UserStore.Db.Query(query)
 	if err != nil {
 		return []User{}, err

@@ -1,0 +1,1 @@
+<div><button hx-get=\"/user/info\" hx-target=\"main\" hx-swap=\"outerHTML\" hx-attribute=\"click\">Click Me</button><main>This is a test website being built for learning HTMX let's go</main></div>

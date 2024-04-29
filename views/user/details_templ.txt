@@ -1,0 +1,5 @@
+<h1 class=\"text-3xl text-center font-bold capitalize\">
+</h1><section class=\"card w-96 bg-base-300 shadow-xl mx-auto mt-12\"><div class=\"card-body flex flex-col gap-6\"><h1 class=\"card-title capitalize text-secondary text-2xl italic\">
+</h1><ul class=\"flex flex-col gap-2 list-disc marker:text-secondary text-sm text-secondary font-semibold\"><li>Email:&nbsp;&nbsp; <span class=\"text-neutral-content font-light\">
+</span></li><li>Created At:&nbsp;&nbsp; <span class=\"text-neutral-content font-light\">
+</span></li></ul><div class=\"divider divider-secondary -m-4\"></div><div class=\"card-actions justify-end\"><a hx-swap=\"transition:true\" class=\"block w-fit h-fit badge badge-outline hover:scale-[1.03] ease-in duration-300\" href=\"/user\"><p class=\"m-1\">&larr; Back to User List</p></a></div></div></section>
